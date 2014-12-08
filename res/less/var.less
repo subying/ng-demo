@@ -1,0 +1,101 @@
+@greenFontColor:#addf00;
+@blueFontColor:#008acb;
+@yellowFontColor:#f60;
+@grayFontColor:#999;
+
+/*display box  @orient为排列方向 horizontal为水平  vertical 为垂直*/
+/*
+box-align表示父容器里面子容器的垂直对齐方式，可选参数如下所示：
+start | end | center | baseline | stretch
+*/
+.flexBox(@orient:horizontal,@align:stretch){
+	display:-webkit-box;
+	display:-moz-box;
+	display:-o-box;
+
+	-moz-box-orient:@orient;
+ 	-webkit-box-orient:@orient;
+ 	-o-box-orient:@orient;
+
+ 	-moz-box-align:@align;
+	 -webkit-box-align:@align;
+	 -o-box-align:@align;
+	 
+}
+.boxFlex(@num:1,@width:0%){
+	-webkit-box-flex:@num;
+	-moz-box-flex:@num;
+	-o-box-flex:@num;
+	width:@width;
+}
+
+/*triangle 三角形*/
+.riangle-up(@width:10px,@color:red){
+    width: 0;
+    height: 0;
+    border-left: @width/2 solid transparent;
+    border-right: @width/2 solid transparent;
+    border-bottom: @width solid @color;
+}
+.triangle-down(@width:10px,@color:red){
+    width: 0;
+    height: 0;
+    border-left: @width/2 solid transparent;
+    border-right: @width/2 solid transparent;
+    border-top: @width solid @color;
+}
+.triangle-left(@width:10px,@color:red){
+    width: 0;
+    height: 0;
+    border-top: @width/2 solid transparent;
+    border-right: @width solid @color;
+    border-bottom: @width/2 solid transparent;
+}
+.triangle-right(@width:10px,@color:red){
+    width: 0;
+    height: 0;
+    border-top: @width/2 solid transparent;
+    border-left: @width solid @color;
+    border-bottom: @width/2 solid transparent;
+}
+.triangle-topleft(@width:10px,@color:red){
+    width: 0;
+    height: 0;
+    border-top: @width solid @color;
+    border-right: @width solid transparent;
+}
+.triangle-topright(@width:10px,@color:red){
+    width: 0;
+    height: 0;
+    border-top: @width solid @color;
+    border-left: @width solid transparent; 
+}
+.triangle-bottomleft(@width:10px,@color:red){
+    width: 0;
+    height: 0;
+    border-bottom: @width solid @color;
+    border-right: @width solid transparent;
+}
+.triangle-bottomright(@width:10px,@color:red){
+    width: 0;
+    height: 0;
+    border-bottom: @width solid @color;
+    border-left: @width solid transparent;
+}
+
+/*blue btn*/
+.blueBtn(@fontSize:1.3rem,@borderRadius:5px,@textAlign:center){
+	background:@blueFontColor;
+	color:#fff;
+	font-size:@fontSize;
+	text-align:@textAlign;
+	border-radius:@borderRadius;
+}
+
+.yellowBtn(@fontSize:1.3rem,@borderRadius:5px,@textAlign:center){
+	background:@yellowFontColor;
+	color:#fff;
+	font-size:@fontSize;
+	text-align:@textAlign;
+	border-radius:@borderRadius;
+}

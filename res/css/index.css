@@ -1,0 +1,86 @@
+/*display box  @orient为排列方向 horizontal为水平  vertical 为垂直*/
+/*
+box-align表示父容器里面子容器的垂直对齐方式，可选参数如下所示：
+start | end | center | baseline | stretch
+*/
+/*triangle 三角形*/
+/*blue btn*/
+.flex_box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+  -o-box-align: stretch;
+  margin: 10px auto;
+}
+.flex_box img {
+  vertical-align: top;
+  width: 100%;
+  height: auto;
+}
+.flex_box a {
+  display: block;
+}
+.sd_fd_1 {
+  -webkit-box-flex: 3.6;
+  -moz-box-flex: 3.6;
+  -o-box-flex: 3.6;
+  width: 0%;
+  overflow: hidden;
+}
+.sd_fd_2 {
+  -webkit-box-flex: 6.4;
+  -moz-box-flex: 6.4;
+  -o-box-flex: 6.4;
+  width: 0%;
+  border-left: 1px solid #cccccc;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -o-box-orient: vertical;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+  -o-box-align: stretch;
+}
+.sd_fd_2_a1 {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  -o-box-flex: 2;
+  width: auto;
+}
+.sd_fd_2_a2 {
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -o-box-flex: 3;
+  width: auto;
+  border-top: 1px solid #cccccc;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+  -o-box-align: stretch;
+}
+.sd_fd_2_b {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  width: 0%;
+  border-right: 1px solid #cccccc;
+}
+.sd_fd_2_c {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  width: 0%;
+}

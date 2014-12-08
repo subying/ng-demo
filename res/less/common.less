@@ -1,0 +1,75 @@
+@import "var";
+
+/* RESET -------- */
+*{
+    margin:0;
+    padding:0;
+}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:62.5%;
+    vertical-align:baseline;
+}
+
+body{
+    background:#fff;
+    font-family:"Microsoft Yahei","Century Gothic",Verdana,Tahoma,Arial,Helvetica,sans-serif;
+    color:#333;
+    text-align:left;
+    font-size:1.3rem;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:bold;
+    font-family:"Microsoft Yahei","Century Gothic",Verdana,Tahoma,Arial;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+img{
+    vertical-align:top;
+}
+
+.clearfix{}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content: " ";clear:both;height:0;}
+
+.wrapper{
+    width:100%;
+    min-width:320px;
+    margin:0 auto;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+/*遮罩*/
+.mask{
+    width:100%;
+    position:absolute;
+    left:0;top:0;
+    opacity:0.6;
+    background-color:#0d0d0d;
+    z-index:8888;
+    display:none;
+}
+/**/
+.utv_alert{
+    position:fixed;
+    left:0;bottom:60px;
+    display:none;
+    background:rgba(0,0,0,0.8);
+    color:#fff;
+    font-size:1.3rem;
+    border-radius:10px;
+    width:85%;min-height:20px;
+    text-align:center;
+    padding:10px;
+    word-wrap:break-word;
+    z-index:10000;
+}

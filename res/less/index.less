@@ -1,0 +1,39 @@
+@import "var";
+@borderColor:#ccc;
+.flex_box{
+	.flexBox;
+	margin:10px auto;
+}
+.flex_box img{
+	vertical-align:top;
+	width:100%;height:auto;
+}
+.flex_box a{
+	display:block;
+}
+.sd_fd_1{
+	.boxFlex(3.6);
+	overflow:hidden;
+}
+.sd_fd_2{
+	.boxFlex(6.4);
+	border-left:1px solid @borderColor;
+	overflow:hidden;
+	.flexBox(vertical);
+}
+.sd_fd_2_a1{
+	.boxFlex(2,auto);
+}
+.sd_fd_2_a2{
+	.boxFlex(3,auto);
+	border-top:1px solid @borderColor;
+	.flexBox;
+}
+.sd_fd_2_b{
+	.boxFlex(1);
+	border-right:1px solid @borderColor;
+}
+.sd_fd_2_c{
+	.boxFlex(1);
+}
+
