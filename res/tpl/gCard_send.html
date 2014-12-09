@@ -1,15 +1,19 @@
 <!-- 贺卡市场 -->
-<ul class="gcard_list gcard_div clearfix">    
+<ul class="gcard_list gcard_div clearfix" id="grsList">    
    <li class="gcard_item gcard_list_item" ng-repeat="item in items">
-       <a class="gcard_list_a" href="#/detail/{{item.id}}">
-           <img class="gcard_list_img" ng-src="{{item.img}}" alt="" />
-           <div class="gcard_list_text">{{item.name}}</div>
-           <div class="gcard_list_tips {{item.tclass}}">视频贺卡</div>
-           <div class="gcard_list_cover"></div>
-           <div class="gcard_list_cal"></div>
-       </a>
+       <div class="gcard_list_ad">
+	       <a class="gcard_list_a" href="#/detail/{{item.id}}">
+	           <img class="gcard_list_img" ng-src="{{item.img}}" alt="" />
+	           <div class="gcard_list_text">{{item.name}}</div>
+	           <div class="gcard_list_tips {{item.tclass}}">视频贺卡</div>
+	       </a>
+	       <div class="gcard_list_cover mCover"></div>
+	       <div class="gcard_list_cal mCal"></div>
+       </div>
    </li>   
 </ul>
-<div class="btns_cover">
-	<a href="javascript:;" class="gcard_btn">编辑</a>
+<div class="btns_cover" id="grsBtnsCover">
+	<a href="javascript:;" class="gcard_btn gcard_ebtn grsEditBtn">编辑</a>
+	<a href="javascript:;" class="gcard_btn gcard_abtn">删除</a>
+	<a href="javascript:;" class="gcard_btn gcard_abtn grsCalBtn">取消</a>
 </div>

@@ -23,7 +23,7 @@ gCardApp.config(['$routeProvider',function ($routeProvider) {
       })
       .when('/receive', {
           templateUrl: 'res/tpl/gCard_send.html'
-          ,title:'已发送贺卡-UTVGO电视自由行'
+          ,title:'贺卡信箱-UTVGO电视自由行'
           ,controller: 'receivePad'
       })
       .otherwise({
@@ -115,3 +115,67 @@ gCardApp.run(['$location', '$rootScope', function($location, $rootScope) {
         $rootScope.title = current.$$route.title;
     });
 }]);
+
+
+//已发送、接收中的编辑按钮
+$(document).on('click','.grsEditBtn',function(){ 
+	grsPad.setMode('edit');
+})
+.on('click','.grsCalBtn',function(){ 
+	grsPad.setMode('normal');
+})
+
+var grsPad = { 
+	mode:'normal'
+	,setMode:function(mode){ 
+		var _mode = mode || 'normal'
+			,grsList = $('#grsList')
+			,grsBtnsCover = $('#grsBtnsCover')
+			,_self = this
+		;
+
+		if(_mode==='edit'){ 
+			grsList.addClass('edit_mode');
+			grsBtnsCover.addClass('edit_mode');
+			_self.bindFn();
+		}else{ 
+			grsList.removeClass('edit_mode');
+			grsBtnsCover.removeClass('edit_mode');
+			_self.unbindFn();
+			grsList.children().removeClass('sel_mode');
+		}
+
+		_self.mode = _mode;
+	}
+	,bindFn:function(){ 
+		var _self = this;
+		$('#grsList').on('click','.mCover',_self.selFn)
+		.on('click','.mCal',_self.calFn)
+		;
+	}
+	,unbindFn:function(){ 
+		var _self = this;
+		$('#grsList').off('click','.mCover',_self.selFn)
+		.off('click','.mCal',_self.calFn)
+		;
+	}
+	,selFn:function(e){
+		if(grsPad.mode != 'edit')  return false;
+
+		var _this = $(this)
+			,_li = _this.parents('li')
+		;
+		_li.addClass('sel_mode');		
+
+		e.stopPropagation();
+	}
+	,calFn:function(e){ 
+		if(grsPad.mode != 'edit')  return false;
+
+		var _this = $(this)
+			,_li = _this.parents('li')
+		;
+		_li.removeClass('sel_mode');
+		e.stopPropagation();
+	}
+}
