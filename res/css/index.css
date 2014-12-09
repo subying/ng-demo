@@ -131,12 +131,16 @@ start | end | center | baseline | stretch
   font-size: 1.6rem;
 }
 /*贺卡列表*/
-.gcard_list_a {
-  display: block;
+.gcard_list_ad {
   width: 100%;
   position: relative;
   max-width: 178px;
   margin: 0 auto;
+}
+.gcard_list_a {
+  display: block;
+  width: 100%;
+  position: relative;
 }
 .gcard_list_img {
   margin: 0 auto;
@@ -202,11 +206,14 @@ start | end | center | baseline | stretch
   left: 0;
   bottom: 0;
   background: #fff;
-  height: 30px;
+  height: 40px;
   width: 100%;
+  text-align: center;
+  z-index: 100;
 }
 .gcard_div {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
+  z-index: 99;
 }
 .gcard_btn {
   background: #008acb;
@@ -214,6 +221,22 @@ start | end | center | baseline | stretch
   font-size: 1.3rem;
   text-align: center;
   border-radius: 5px;
+  width: 45%;
+  height: 30px;
+  margin: 5px 0;
+  line-height: 30px;
+  font-size: 1.6rem;
+  display: none;
+}
+.gcard_ebtn {
+  width: 90%;
+  display: inline-block;
+}
+.edit_mode .gcard_abtn {
+  display: inline-block;
+}
+.edit_mode .gcard_ebtn {
+  display: none;
 }
 .show {
   display: block;
