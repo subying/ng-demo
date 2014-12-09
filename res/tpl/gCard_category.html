@@ -1,0 +1,9 @@
+<!-- 贺卡市场 -->
+<ul class="gcard_list clearfix">    
+   <li class="gcard_item" ng-repeat="item in items">
+       <a class="gcard_item_a" href="#/list/{{item.id}}">
+           <img class="gcard_item_img" ng-src="{{item.img}}" alt="" />
+           <span class="gcard_item_text">{{item.name}}</span>
+       </a>
+   </li>   
+</ul>

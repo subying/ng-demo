@@ -1,39 +1,144 @@
 @import "var";
-@borderColor:#ccc;
-.flex_box{
-	.flexBox;
-	margin:10px auto;
-}
-.flex_box img{
-	vertical-align:top;
-	width:100%;height:auto;
-}
-.flex_box a{
+
+.card_market{
+	width:100%;
+	height:160px;
+	background:#7cc677;
+	box-shadow:1px 1px 1px #ccc;
 	display:block;
 }
-.sd_fd_1{
-	.boxFlex(3.6);
-	overflow:hidden;
+.card_con{
+	margin:0 auto;
+	padding:45px 0;
+	width:180px;height:70px;
 }
-.sd_fd_2{
-	.boxFlex(6.4);
-	border-left:1px solid @borderColor;
-	overflow:hidden;
-	.flexBox(vertical);
+.card_ico{
+	background:url(../images/ico_cart.png);
+	background-size:74px 68px;
+	width:74px;height:68px;
 }
-.sd_fd_2_a1{
-	.boxFlex(2,auto);
+.card_tit{
+	width:90px;
+	color:#fff;
+	text-align:center;
+	font-size:1.8rem;
+	padding-top:10px;
+	line-height:26px;
 }
-.sd_fd_2_a2{
-	.boxFlex(3,auto);
-	border-top:1px solid @borderColor;
-	.flexBox;
+.card_user{
+	.flexBox();
+	margin:20px auto;
 }
-.sd_fd_2_b{
+.card_info{
+	height:104px;
+	box-shadow:1px 1px 1px #ccc;
+	color:#fff;
+	text-align:center;
+	padding:28px 0;
 	.boxFlex(1);
-	border-right:1px solid @borderColor;
+	display:block;
+
+	.ico{
+		width:48px;height:50px;
+		background-size:48px 50px;
+		margin:0 auto;
+	}
+
+	p{
+		font-size:1.8rem;
+	}
+
+	.text{
+		margin-top:5px;
+	}
 }
-.sd_fd_2_c{
-	.boxFlex(1);
+.card_send{
+	background:#f86860;
+
+	.ico{
+		background-image:url(../images/ico_send.png);
+	}
+}
+.card_recieve{
+	background:#b57ed1;
+	margin-right:10px;
+
+	.ico{
+		background-image:url(../images/ico_receive.png);
+	}
 }
 
+/*贺卡分类*/
+.gcard_list{
+	display:table;
+	margin-left:-5px;
+	width:100%;
+}
+.gcard_item{
+	float:left;
+	.bsBorderBox;
+	padding:0 0 10px 10px;
+	width:50%;
+	min-width:110px;
+	max-width:240px;
+}
+.gcard_item_a{
+	background:#fff;
+	border-radius:5px;
+	float:left;
+	padding:10px;
+	.bsBorderBox;
+	width:100%;
+}
+.gcard_item_img{
+	float:left;
+	height:34px;
+	margin-top:6px;
+}
+.gcard_item_text{
+	line-height:46px;
+	margin-left:10px;
+	color:#333;
+	font-size:1.6rem;
+}
+
+/*贺卡列表*/
+.gcard_list_item{
+}
+.gcard_list_a{
+	display:block;
+	width:100%;
+	position:relative;
+	max-width:178px;
+	margin:0 auto;
+}
+.gcard_list_img{
+	margin:0 auto;
+	width:100%;
+}
+.gcard_list_text{
+	position:absolute;
+	left:0;bottom:0;
+	background-color:rgba(0,0,0,.5);
+	color:#fff;
+	font-size:1.6rem;
+	width:100%;height:30px;
+	text-align:center;line-height:30px;
+}
+.gcard_list_tips{
+	position:absolute;
+	left:0;top:0;
+	color:#fff;
+	background:url(../images/ico_label.png) no-repeat;
+	background-size:74px 20px;
+	width:74px;height:20px;
+	text-indent:5px;line-height:20px;
+	font-size:1.2rem;
+}
+
+.show{
+	display:block;
+}
+.hide{
+	display:none;
+}

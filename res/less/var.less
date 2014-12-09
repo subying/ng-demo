@@ -92,10 +92,11 @@ start | end | center | baseline | stretch
 	border-radius:@borderRadius;
 }
 
-.yellowBtn(@fontSize:1.3rem,@borderRadius:5px,@textAlign:center){
-	background:@yellowFontColor;
-	color:#fff;
-	font-size:@fontSize;
-	text-align:@textAlign;
-	border-radius:@borderRadius;
+/*box-sizing border-box*/
+.bsBorderBox{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
