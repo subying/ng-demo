@@ -21,6 +21,11 @@ gCardApp.config(['$routeProvider',function ($routeProvider) {
           ,title:'已发送贺卡-UTVGO电视自由行'
           ,controller: 'sendPad'
       })
+      .when('/receive', {
+          templateUrl: 'res/tpl/gCard_send.html'
+          ,title:'已发送贺卡-UTVGO电视自由行'
+          ,controller: 'receivePad'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -60,7 +65,7 @@ gCardApp.controller('listPad',function($scope,$routeParams,$http) {
         var _data = [];
         $.each(response||[],function(i,obj){
             _data[i] = obj;
-            _data[i].tclass=obj.type?'show':'hide';
+            _data[i].tclass=obj.type?'show':'';
         });
 
         $scope.items = _data;
@@ -78,13 +83,30 @@ gCardApp.controller('sendPad',function($scope,$routeParams,$http) {
         var _data = [];
         $.each(response||[],function(i,obj){
             _data[i] = obj;
-            _data[i].tclass=obj.type?'show':'hide';
+            _data[i].tclass=obj.type?'show':'';
         });
 
         $scope.items = _data;
     });
 });
 
+
+//定义控制器 已接收列表
+gCardApp.controller('receivePad',function($scope,$routeParams,$http) {
+    var p = $http({
+      method: 'GET'
+      ,url: '/res/json/clist.json'
+    });
+    p.success(function(response, status, headers, config){
+        var _data = [];
+        $.each(response||[],function(i,obj){
+            _data[i] = obj;
+            _data[i].tclass=obj.type?'show':'';
+        });
+
+        $scope.items = _data;
+    });
+});
 
 
 //当url改变时
