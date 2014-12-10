@@ -238,6 +238,47 @@ start | end | center | baseline | stretch
 .edit_mode .gcard_ebtn {
   display: none;
 }
+/*详情页面*/
+.gCard_detail {
+  padding: 0;
+}
+.gCard_show_con {
+  background: #fff;
+  padding: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.gCard_show_incon {
+  border: 1px dashed #ccc;
+  padding: 10px;
+}
+.gCard_show_clabel {
+  height: 260px;
+}
+.gCard_detail_scon {
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.gCard_show_text {
+  background: #fff;
+  padding: 5px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 4px;
+}
+.gCard_show_text .gtext {
+  line-height: 22px;
+  font-size: 1.2rem;
+}
 .show {
   display: block;
 }

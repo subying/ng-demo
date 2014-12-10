@@ -36,7 +36,7 @@ gCardApp.config(['$routeProvider',function ($routeProvider) {
 gCardApp.controller('userInfoPad',function($scope,$routeParams,$http) {
     var p = $http({
       method: 'GET'
-      ,url: '/res/json/cinfo.json'
+      ,url: config.action.cardIndex
     });
     p.success(function(response, status, headers, config){
         $scope.data = response;
@@ -48,7 +48,7 @@ gCardApp.controller('userInfoPad',function($scope,$routeParams,$http) {
 gCardApp.controller('categoryPad',function($scope,$routeParams,$http) {
     var p = $http({
       method: 'GET'
-      ,url: '/res/json/category.json'
+      ,url: config.action.cardCategory
     });
     p.success(function(response, status, headers, config){
         $scope.items = response;
@@ -59,7 +59,7 @@ gCardApp.controller('categoryPad',function($scope,$routeParams,$http) {
 gCardApp.controller('listPad',function($scope,$routeParams,$http) {
     var p = $http({
       method: 'GET'
-      ,url: '/res/json/clist.json'
+      ,url: config.action.cardList
     });
     p.success(function(response, status, headers, config){
         var _data = [];
@@ -77,7 +77,7 @@ gCardApp.controller('listPad',function($scope,$routeParams,$http) {
 gCardApp.controller('sendPad',function($scope,$routeParams,$http) {
     var p = $http({
       method: 'GET'
-      ,url: '/res/json/clist.json'
+      ,url: config.action.sendList
     });
     p.success(function(response, status, headers, config){
         var _data = [];
@@ -95,7 +95,7 @@ gCardApp.controller('sendPad',function($scope,$routeParams,$http) {
 gCardApp.controller('receivePad',function($scope,$routeParams,$http) {
     var p = $http({
       method: 'GET'
-      ,url: '/res/json/clist.json'
+      ,url: config.action.receiveList
     });
     p.success(function(response, status, headers, config){
         var _data = [];
