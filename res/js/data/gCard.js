@@ -112,7 +112,10 @@ gCardApp.controller('receivePad',function($scope,$routeParams,$http) {
 //当url改变时
 gCardApp.run(['$location', '$rootScope', function($location, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-        $rootScope.title = current.$$route.title;
+        //先判断  否则在 redirectTo 时 出现title未定义的错误
+        if(current.$$route && current.$$route.title){
+          $rootScope.title = current.$$route.title;
+        }
     });
 }]);
 
