@@ -6,6 +6,11 @@ gCardApp.config(['$routeProvider',function ($routeProvider) {
         ,title:'贺卡详情-UTVGO电视自由行'
         ,controller: 'cardDetail'
       })
+      .when('/send', {
+        templateUrl: 'res/tpl/gCard_detail_send.html'
+        ,title:'赠送贺卡-UTVGO电视自由行'
+        ,controller: 'cardDetailSend'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -26,9 +31,20 @@ gCardApp.controller('cardDetail',function($scope,$http) {
         }
 
         $scope.data = _data;
+
+        //
+        selectTextPad._data={};
+        selectTextPad._data.img = _data.img;
+        selectTextPad._data.name = _data.name;
+        selectTextPad._data.text = _data.text;
     });
 });
 
+gCardApp.controller('cardDetailSend',function($scope,$http) {
+	$scope.data = selectTextPad._data;
+});
+
+//过滤器
 gCardApp.filter('to_trusted', ['$sce', function($sce){
     return function(text) {
         return $sce.trustAsHtml(text);
