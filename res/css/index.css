@@ -479,6 +479,7 @@ start | end | center | baseline | stretch
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 10px;
+  position: relative;
 }
 .gCard_owner_pad .t2 {
   -webkit-box-flex: 1;
@@ -507,6 +508,14 @@ start | end | center | baseline | stretch
   line-height: 30px;
   width: 100%;
 }
+.gCard_owner_pad .owner_id {
+  width: 60%;
+  float: left;
+}
+.gCard_owner_pad .owner_nickname {
+  width: 40%;
+  float: left;
+}
 .gCard_owner_pad .btn {
   background: #008acb;
   color: #fff;
@@ -517,6 +526,48 @@ start | end | center | baseline | stretch
   line-height: 30px;
   display: block;
   width: 100%;
+}
+.gCard_owner_pad .owner_del {
+  position: absolute;
+  right: 13px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 50%;
+  background: url(../images/ico_close.png) no-repeat center center #aaaaaa;
+  background-size: 14px 16px;
+}
+.gCard_owner_btnCover {
+  width: 100%;
+  padding: 0 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+  -o-box-align: stretch;
+}
+.gCard_add_owner {
+  border-radius: 0;
+  height: 30px;
+  line-height: 30px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  width: 0%;
+  margin: 10px 0 0 0;
+}
+.gCard_add_obtn {
+  margin-right: 10px;
 }
 .mask {
   height: 100%;

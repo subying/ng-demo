@@ -8,14 +8,50 @@
 </div>
 
 
-<!-- 赠卡人 -->
+<!-- 收件人 -->
 <div class="gCard_owner">
+	<p>收件人</p>
+	<ul class="owner_list">
+		<li class="gCard_owner_pad">
+			<div class="t1">
+				<input type="text" class="owner_id" name="" value="收件人广电号" readonly=true />
+				<input type="text" class="owner_nickname" name="" value="称谓" readonly=true />
+				<span class="owner_del"></span>
+			</div>
+			<div class="t2"><a href="javascript:;" class="btn ">更改称谓</a></div>
+		</li>
+	</ul>
+	<div class="gCard_owner_btnCover">
+		<div href="javascript:;" class="gCard_show_btn gCard_add_owner gCard_add_obtn">增加收卡人</div>
+		<div href="javascript:;" class="gCard_show_btn gCard_add_owner">从好友添加</div>
+	</div>
+</div>
+
+<!-- 赠卡人 -->
+<div class="gCard_owner gCard_user">
 	<p>赠卡人</p>
 	<div class="gCard_owner_pad">
-		<div class="t1"><input type="text" name="" value="默认读取登录广电号的姓名" readonly=true id="" /></div>
-		<div class="t2"><a href="javascript:;" class="btn ">更改称谓</a></div>
-		
+		<div class="t1"><input type="text" value="默认读取登录广电号的姓名" readonly=true id="" /></div>
+		<div class="t2"><a href="javascript:;" class="btn">更改称谓</a></div>
 	</div>
 </div>
 
 <a href="javascript:;" class="gCard_show_btn ">赠送</a>
+
+<div class="mask showMask" id="mask"></div>
+
+<!-- 输入智能卡号/广电号 -->
+
+<!-- 选择好友 -->
+<div class="gCard_stext_cover">
+	<div class="gCard_sheader"><span class="text">选择好友</span></div>
+	<ul class="gCard_st_list" id="gCardSTList">
+		<li class="item_con" ng-repeat="item in data.list">
+			<div class="item_lcon">
+				<p class="tit">{{item.name}}</p>
+				<p>{{item.text}}</p>
+			</div>
+			<div class="item_rcon itemSTCon" data-id="{{item.id}}"><span class="item_arr"></span></div>
+		</li>
+	</ul>
+</div>

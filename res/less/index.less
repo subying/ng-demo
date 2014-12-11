@@ -402,6 +402,7 @@
 		.boxFlex(2.8);
 		.bsBorderBox;
 		padding:0 10px;
+		position:relative;
 	}
 	.t2{
 		.boxFlex(1);
@@ -419,6 +420,15 @@
 		width:100%;
 	}
 
+	.owner_id{
+		width:60%;
+		float:left;
+	}
+	.owner_nickname{
+		width:40%;
+		float:left;
+	}
+
 	.btn{
 		.blueBtn(1.4rem,0);
 		height:30px;
@@ -426,6 +436,31 @@
 		display:block;
 		width:100%;
 	}
+
+	.owner_del{
+		position:absolute;
+		right:13px;top:3px;
+		width:24px;height:24px;
+		display:block;
+		border-radius:50%;
+		background:url(../images/ico_close.png) no-repeat center center #aaa;
+		background-size:14px 16px;
+	}
+}
+.gCard_owner_btnCover{
+	width:100%;
+	padding:0 10px;
+	.bsBorderBox;
+	.flexBox;
+}
+.gCard_add_owner{
+	border-radius:0;
+	height:30px;line-height:30px;
+	.boxFlex(1);
+	margin:10px 0 0 0;
+}
+.gCard_add_obtn{
+	margin-right:10px;
 }
 
 .mask{
