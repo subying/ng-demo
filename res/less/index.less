@@ -344,6 +344,90 @@
 		line-height:20px;
 	}
 }
+
+/*赠送贺卡*/
+.gCard_send_con{
+	width:100%;
+	background:#fff;
+	display:table;
+
+	.img{
+		float:left;
+		
+		width:40%;
+		.bsBorderBox;
+		padding-left:10px;
+
+		img{
+			max-width:178px;
+			width:100%;
+		}
+	}
+
+	.text{
+		float:left;
+		padding:5px 10px;
+		width:60%;
+		.bsBorderBox;
+	}
+
+	.name{
+		line-height:24px;
+		font-size:1.4rem;
+	}
+
+	.context{
+		line-height:20px;
+		font-size:1.4rem;
+	}
+}
+
+.gCard_owner{
+	width:100%;
+	margin-top:10px;
+	padding:10px 0;
+	.bsBorderBox;
+	background:#fff;
+
+	p{
+		font-size:1.4rem;
+		text-indent:10px;
+		line-height:24px;
+		margin-bottom:5px;
+	}
+}
+.gCard_owner_pad{
+	.flexBox;
+	.t1{
+		.boxFlex(2.8);
+		.bsBorderBox;
+		padding:0 10px;
+	}
+	.t2{
+		.boxFlex(1);
+		.bsBorderBox;
+		padding-right:10px;
+	}
+	input{
+		font-size:1.2rem;
+		color:#555;
+		background:#ccc;
+		border:none;
+		.bsBorderBox;
+		padding:0 5px;
+		height:30px;line-height:30px;
+		width:100%;
+	}
+
+	.btn{
+		.blueBtn(1.4rem,0);
+		height:30px;
+		line-height:30px;
+		display:block;
+		width:100%;
+	}
+}
+
 .mask{
 	height:100%;
 	position:fixed;
