@@ -279,7 +279,7 @@
 }
 .gCard_stext_cover{
 	position:fixed;
-	bottom:0;left:0;
+	top:0;left:0;
 	background:#eeeef0;
 	padding-top:5px;
 	display:none;
@@ -461,6 +461,124 @@
 }
 .gCard_add_obtn{
 	margin-right:10px;
+}
+
+.gCard_friend{
+	height:405px;
+	.nimg{
+		width:44px;height:44px;
+		float:left;
+	}
+	.ntext{
+		float:left;
+		margin-left:10px;
+	}
+
+	img{
+		width:100%;height:100%;
+	}
+
+	.gCard_sheader .text{
+		height:40px;line-height:40px;
+	}
+
+	.gCard_st_list{
+		margin-bottom:0;
+	}
+}
+
+/*称谓*/
+.friend_nick{
+	width:100%;
+	padding:10px;
+	.bsBorderBox;
+	background:#eeeef0;
+	position:fixed;
+	top:0;left:0;
+	display:none;
+
+	.gCard_owner_btnCover{
+		padding:0;
+	}
+}
+.nick_input{
+	padding:5px 10px;
+	.bsBorderBox;
+	background:#ccc;
+	font-size:1.4rem;
+	color:#000;
+}
+
+.nick_menu_select{
+	width:100%;
+	.flexBox;
+
+	li{
+		.blueBtn(1.4rem,0);
+		display:block;
+
+		height:30px;line-height:30px;
+		.boxFlex(1);
+		margin:10px 0 0 0;
+	}
+
+	.nitem{
+		background:#aaa;
+		color:#555;
+		position:relative;
+	}
+
+	li.on{
+		background:#addf00;
+	}
+
+	.first{
+		margin-right:10px;
+	}
+}
+.nick_name_con{
+	margin-left:-2px;
+	min-height:240px;
+}
+.nick_name_con a{
+	float:left;
+	height:40px;line-height:40px;
+	text-align:center;
+	font-size:1.2rem;
+	margin:8px 0 0 2px;
+	width:16%;
+	color:#fff;
+	background:@blueFontColor;
+	min-width:48px;
+}
+
+.input_keyNo_ncover{
+	width:100%;
+	padding:0 10px;
+	.bsBorderBox;
+	margin-top:10px;
+
+	input{
+		width:100%;height:30px;
+		line-height:30px;
+		.bsBorderBox;
+		border:1px solid #ccc;
+		padding:0 5px;
+		font-size:1.4rem;
+	}
+}
+.input_keyNo_cover {
+	height:140px;
+
+	.gCard_show_btn{
+		border-radius:0;
+		.boxFlex(1);
+		margin:10px 0 0 0;
+	}
+
+	.gCard_add_obtn{
+		margin-right:10px;
+	}
 }
 
 .mask{
