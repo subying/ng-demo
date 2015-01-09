@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 var config = {},basePath,_location=window.location;
-=======
-var config = {},utv={plugins:{}};
->>>>>>> origin/master
 config.action = {
 	cardIndex:'/res/json/cinfo.json'//贺卡管理首页
 	,cardCategory:'/res/json/category.json'//贺卡分类
@@ -10,14 +7,10 @@ config.action = {
 	,sendList:'/res/json/clist.json' //已发送
 	,receiveList:'/res/json/clist.json' //已接收
 	,cardDetail:'/res/json/cdetail.json'//详情
-<<<<<<< HEAD
+	,friendList:'/res/json/friend.json' //好友列表
 }
 basePath = _location.protocol+'//' + _location.host +':' + (_location.port || 80)+'/';
 _location = null;
-=======
-	,friendList:'/res/json/friend.json' //好友列表
-}
-
 
 /*alert*/
 utv.plugins.alert = function(options){
@@ -148,5 +141,9 @@ utv.plugins.simBox.prototype={
 			_self.close();
 		});
 	}
+<<<<<<< HEAD
+};
+>>>>>>> origin/master
+=======
 };
 >>>>>>> origin/master
