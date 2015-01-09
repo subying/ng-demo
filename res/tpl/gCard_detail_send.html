@@ -1,0 +1,108 @@
+<!-- 贺卡 -->
+<div class="gCard_send_con">
+	<div class="img"><img ng-src="{{data.img}}" alt="" /></div>
+	<div class="text">
+		<p class="name">{{data.name}}</p>
+		<p class="context">{{data.text}}</p>
+	</div>
+</div>
+
+
+<!-- 收件人 -->
+<div class="gCard_owner">
+	<p>收件人</p>
+	<ul class="owner_list">
+		<li class="gCard_owner_pad" ng-repeat="item in data.ownerList">
+			<div class="t1">
+				<input type="text" class="owner_id" name="" value="{{item.id}}" readonly=true />
+				<input type="text" class="owner_nickname" name="" value="{{item.nickname}}" readonly=true />
+				<span class="owner_del"></span>
+			</div>
+			<div class="t2"><a href="javascript:;" class="btn " data-id="{{item.id}}">更改称谓</a></div>
+		</li>
+	</ul>
+	<div class="gCard_owner_btnCover">
+		<div href="javascript:;" ng-click="addOwner()" class="gCard_show_btn gCard_add_owner gCard_add_obtn">增加收卡人</div>
+		<div href="javascript:;" ng-click="selcetOwner()" class="gCard_show_btn gCard_add_owner addOwner">从好友添加</div>
+	</div>
+</div>
+
+<!-- 赠卡人 -->
+<div class="gCard_owner gCard_user">
+	<p>赠卡人</p>
+	<div class="gCard_owner_pad">
+		<div class="t1"><input type="text" value="默认读取登录广电号的姓名" readonly=true id="" /></div>
+		<div class="t2"><a href="javascript:;" class="btn">更改称谓</a></div>
+	</div>
+</div>
+
+<a href="javascript:;" class="gCard_show_btn ">赠送</a>
+
+<div class="mask showMask" id="mask"></div>
+
+<!-- 选择好友 -->
+<div class="gCard_stext_cover gCard_friend" id="gCardFD">
+	<div class="gCard_sheader"><span class="text">选择好友</span></div>
+	<ul class="gCard_st_list" id="gCardFDList">
+		<li class="item_con" ng-repeat="item in friends">
+			<div class="item_lcon">
+				<div class="nimg"><img src="res/images/ico_nimg.png" alt=""></div>
+				<div class="ntext">
+					<p class="tit">{{item.name}}</p>
+					<p>{{item.tel}}</p>
+				</div>
+			</div>
+			<div class="item_rcon itemSTCon" data-id="{{item.id}}"><span class="item_arr"></span></div>
+		</li>
+	</ul>
+	<div class="gCard_friend_bcover gCard_owner_btnCover">
+		<div href="javascript:;" class="gCard_show_btn gCard_add_owner gCard_add_obtn">确定</div>
+		<div href="javascript:;" class="gCard_show_btn gCard_add_owner close">关闭</div>
+	</div>
+</div>
+
+<!-- 更改称谓 -->
+<div class="friend_nick">
+	<div class="nick_input">称谓</div>
+	<div class="nick_con">
+		<ul class="nick_menu_select">
+			<li class="nitem first on">姓氏首字母</li>
+			<li class="nitem">称谓</li>
+		</ul>
+		<dl class="nick_name_con">
+			<dd class="fname_list clearfix">
+				<div class="flcon ">
+					<a href="javascript:;">a</a><a href="javascript:;">b</a><a href="javascript:;">c</a><a href="javascript:;">d</a>
+					<a href="javascript:;">e</a><a href="javascript:;">f</a><a href="javascript:;">g</a><a href="javascript:;">h</a>
+					<a href="javascript:;">i</a><a href="javascript:;">j</a><a href="javascript:;">k</a><a href="javascript:;">l</a>
+					<a href="javascript:;">m</a><a href="javascript:;">n</a><a href="javascript:;">o</a><a href="javascript:;">p</a>
+					<a href="javascript:;">q</a><a href="javascript:;">r</a><a href="javascript:;">s</a><a href="javascript:;">t</a>
+					<a href="javascript:;">u</a><a href="javascript:;">v</a><a href="javascript:;">w</a><a href="javascript:;">s</a>
+					<a href="javascript:;">y</a><a href="javascript:;">z</a>
+				</div>
+				<div class="slcon hide">
+					<a href="javascript:;">A</a><a href="javascript:;">阿</a>
+				</div>
+			</dd>
+			<dd class="nick_list hide clearfix">
+				<div class="flcon">
+					<a href="javascript:;">A</a><a href="javascript:;">阿</a>
+				</div>
+			</dd>
+		</dl>
+	</div>
+	<div class="gCard_friend_bcover gCard_owner_btnCover">
+		<div href="javascript:;" class="gCard_show_btn gCard_add_owner gCard_add_obtn">退格</div>
+		<div href="javascript:;" class="gCard_show_btn gCard_add_owner close">关闭</div>
+	</div>
+</div>
+
+<!-- 输入智能卡号/广电号 -->
+<div class="gCard_stext_cover input_keyNo_cover" id="inputKeyNo">
+	<div class="gCard_sheader"><span class="text">请输入智能卡号或广电号</span></div>
+	<div class="input_keyNo_ncover"><input type="number" placeholder="智能卡号/广电号" maxlength="16" /></div>
+	<div class="gCard_friend_bcover gCard_owner_btnCover">
+		<div href="javascript:;" class="gCard_show_btn gCard_add_obtn">确定</div>
+		<div href="javascript:;" class="gCard_show_btn close">取消</div>
+	</div>
+</div>

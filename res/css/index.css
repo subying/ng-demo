@@ -334,7 +334,7 @@ start | end | center | baseline | stretch
 }
 .gCard_stext_cover {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   background: #eeeef0;
   padding-top: 5px;
@@ -401,6 +401,316 @@ start | end | center | baseline | stretch
 }
 .gCard_st_list .tit {
   line-height: 20px;
+}
+/*赠送贺卡*/
+.gCard_send_con {
+  width: 100%;
+  background: #fff;
+  display: table;
+}
+.gCard_send_con .img {
+  float: left;
+  width: 40%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.gCard_send_con .img img {
+  max-width: 178px;
+  width: 100%;
+}
+.gCard_send_con .text {
+  float: left;
+  padding: 5px 10px;
+  width: 60%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gCard_send_con .name {
+  line-height: 24px;
+  font-size: 1.4rem;
+}
+.gCard_send_con .context {
+  line-height: 20px;
+  font-size: 1.4rem;
+}
+.gCard_owner {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+}
+.gCard_owner p {
+  font-size: 1.4rem;
+  text-indent: 10px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+.gCard_owner_pad {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+  -o-box-align: stretch;
+}
+.gCard_owner_pad .t1 {
+  -webkit-box-flex: 2.8;
+  -moz-box-flex: 2.8;
+  -o-box-flex: 2.8;
+  width: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+  position: relative;
+}
+.gCard_owner_pad .t2 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  width: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+.gCard_owner_pad input {
+  font-size: 1.2rem;
+  color: #555;
+  background: #ccc;
+  border: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 5px;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+}
+.gCard_owner_pad .owner_id {
+  width: 60%;
+  float: left;
+}
+.gCard_owner_pad .owner_nickname {
+  width: 40%;
+  float: left;
+}
+.gCard_owner_pad .btn {
+  background: #008acb;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 0;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  width: 100%;
+}
+.gCard_owner_pad .owner_del {
+  position: absolute;
+  right: 13px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 50%;
+  background: url(../images/ico_close.png) no-repeat center center #aaaaaa;
+  background-size: 14px 16px;
+}
+.gCard_owner_btnCover {
+  width: 100%;
+  padding: 0 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+  -o-box-align: stretch;
+}
+.gCard_add_owner {
+  border-radius: 0;
+  height: 30px;
+  line-height: 30px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  width: 0%;
+  margin: 10px 0 0 0;
+}
+.gCard_add_obtn {
+  margin-right: 10px;
+}
+.gCard_friend {
+  height: 405px;
+}
+.gCard_friend .nimg {
+  width: 44px;
+  height: 44px;
+  float: left;
+}
+.gCard_friend .ntext {
+  float: left;
+  margin-left: 10px;
+}
+.gCard_friend img {
+  width: 100%;
+  height: 100%;
+}
+.gCard_friend .gCard_sheader .text {
+  height: 40px;
+  line-height: 40px;
+}
+.gCard_friend .gCard_st_list {
+  margin-bottom: 0;
+}
+/*称谓*/
+.friend_nick {
+  width: 100%;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #eeeef0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.friend_nick .gCard_owner_btnCover {
+  padding: 0;
+}
+.nick_input {
+  padding: 5px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #ccc;
+  font-size: 1.4rem;
+  color: #000;
+}
+.nick_menu_select {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+  -o-box-align: stretch;
+}
+.nick_menu_select li {
+  background: #008acb;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 0;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  width: 0%;
+  margin: 10px 0 0 0;
+}
+.nick_menu_select .nitem {
+  background: #aaa;
+  color: #555;
+  position: relative;
+}
+.nick_menu_select li.on {
+  background: #addf00;
+}
+.nick_menu_select .first {
+  margin-right: 10px;
+}
+.nick_name_con {
+  margin-left: -2px;
+  min-height: 240px;
+}
+.nick_name_con a {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 8px 0 0 2px;
+  width: 16%;
+  color: #fff;
+  background: #008acb;
+  min-width: 48px;
+}
+.input_keyNo_ncover {
+  width: 100%;
+  padding: 0 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.input_keyNo_ncover input {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 0 5px;
+  font-size: 1.4rem;
+}
+.input_keyNo_cover {
+  height: 140px;
+}
+.input_keyNo_cover .gCard_show_btn {
+  border-radius: 0;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  width: 0%;
+  margin: 10px 0 0 0;
+}
+.input_keyNo_cover .gCard_add_obtn {
+  margin-right: 10px;
 }
 .mask {
   height: 100%;
